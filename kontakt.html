@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<title>Kupovina</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="icon" href="slike/icon.png" sizes="16x16">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-nav">
+	  <a class="navbar-brand" href="index.html"><img src="logo.svg" width="100%" height="100%" alt="logo"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigacija" aria-controls="navigacija" aria-expanded="false" aria-label="Toggle navigation"> 
+			<span class="navbar-toggler-icon"></span> 
+		</button>
+		<div class="collapse navbar-collapse" id="navigacija">
+		  <ul class="navbar-nav ml-auto font">
+			<li class="nav-item"> <a class="nav-link" href="index.html">Početna</a></li>
+			<li class="nav-item"> <a class="nav-link" href="tijelo.html">Tijelo</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="lice.html">Lice</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="tipovi.html">Tipovi kože</a> </li>
+			<li class="nav-item active"> <a class="nav-link" href="kontakt.html"><i class="fa fa-shopping-cart" style="font-size:20px"><span class="sr-only">(current)</span></i></a></li>
+			<li class="nav-item"> <a class="nav-link" href="onama.html">O nama</a> </li>
+		  </ul>
+		</div>
+	</nav>
+	<br>
+	<header>
+		<h1 class="font text-center">ISPUNI NARUDŽBU</h1>
+	</header>
+	<br>
+	<main class="container-fluid">
+			<form class="font bg-form" action="hvala.html">
+				<div class="form-row align-items-center">
+					<div class="form-group col-md-4 mx-auto">
+						<label for="Ime">Ime</label>
+						<input type="text" class="form-control" id="Ime" placeholder="Ime">
+					</div>
+					<div class="form-group col-md-4 mx-auto">
+						<label for="Prezime">Prezime</label>
+						<input type="text" class="form-control" id="Prezime" placeholder="Prezime">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-8 mx-auto">
+						<label for="text">Adresa dostave</label>
+						<input type="text" class="form-control" id="Adresa" placeholder="Ulica, broj, grad">
+					</div>
+				</div>				
+				<div class="form-row">
+					<div class="form-group col-md-4 mx-auto">
+						<label for="lice">Lice</label>
+						<select class="form-control" id="exampleFormControlSelect1" placeholder="Odaberite proizvod za lice">
+							<option selected>Odaberi...</option>
+							<option>SKINMAGIC krema za lice</option>
+							<option>Krema za lice</option>
+							<option>Gel za čišćenje lica</option>
+							<option>Krema za suhu kožu lica</option>
+					        <option>Krema za mješovitu kožu lica</option>
+					        <option>Krema za masnu kožu lica</option>
+					    </select>
+					</div>
+					<div class="form-group col-md-4 mx-auto">
+						<label for="tijelo">Tijelo</label>
+					<select class="form-control" id="exampleFormControlSelect1" placeholder="Odaberite proizvod za tijelo">
+						<option selected>Odaberi...</option>
+					  <option>Sol za kupku</option>
+					  <option>Četka za tijelo</option>
+					  <option>Krema za suhu kožu</option>
+					  <option>Gel za masnu kožu</option>
+					</select>
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-md-5">
+					</div>
+					<div class="col-md-4 ml-auto">
+						<button id="submit" class="btn btn-light font">Pošalji</button>
+				    </div>
+				</div>
+			</form>
+		<br>
+		<h1 class="font text-center">POSJETI NAS U TRGOVINI</h1>
+		<br>
+		<div class="row">
+			<div class="col-md-6 text-center">
+				<div id="map">
+					<script>
+						function initMap() {
+						  var rijeka = {lat: 45.3267, lng: 14.4465};
+						  var map = new google.maps.Map(
+							  document.getElementById('map'), {zoom: 15, center: rijeka});
+						  var marker1 = new google.maps.Marker({position: rijeka, map: map});
+						  var zagreb = {lat: 45.774605, lng: 15.945522};
+						  var marker2 = new google.maps.Marker({position: zagreb, map: map})
+
+						}
+					</script>
+				</div>
+				<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPK1QL0Ojp1lZ0rDcCR-o6-RMi-S39hnk&callback=initMap"></script>
+			</div>
+			<div class="col-md-6">
+				<div class="bg-lok">
+					<br>
+					<h2 class="font text-center">LOKACIJE</h2>
+					<p class="font"><b>RIJEKA</b> &rarr; Ulica Alda Colonella 1, 51000 Rijeka</p>
+					<p class="font"><b>ZAGREB</b> &rarr; Ulica Vice Vukova 6, 10000 Zagreb</p>
+					<br>
+					<h2 class="font text-center">RADNO VRIJEME</h2>
+					<p class="font text-center">Ponedjeljak-subota: 8:00 - 20:00</p>
+					<p class="font text-center">Nedjelja: zatvoreno</p>
+					<br>
+					<h2 class="font text-center">KONTAKT</h2>
+					<p class="font text-right">Broj telefona: +38591234444</p>
+					<p class="font text-right">Email: skinri@gmail.com</p>
+				</div>				
+			</div>
+		</div>	
+	</main> 
+	<!-- footer -->
+	<footer class="mojfooter">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-2 text-center">
+			    	<a href="index.html"><img src="logo.svg" width="75%" height="75%" alt="logo"/> </a>
+				</div>
+				<div class="col-12 col-md-3 text-center">
+					<h4>KONTAKT</h4>
+					<br>
+					<p>Telefon: +38591234444</p>
+				  	<p>E-mail: skinri@gmail.com</p>
+				</div>
+				<div class="col-12 col-md-3 text-center">
+					<h4>RADNO VRIJEME</h4>
+					<p>Ponedjeljak-subota: 8:00-20:00</p>
+					<p>Nedjelja: zatvoreno</p>
+				</div>
+				<div class="col-12 col-md-3 text-center">
+					<h4>TRGOVINE</h4>
+					<p>Ulica Alda Colonella 1, 51000 Rijeka</p>
+					<p>Ulica Vice Vukova 6, 10000 Zagreb</p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="font text-center py-2"> 	&copy; 2022 Copyright:
+    		<a href="https://anasobotincic.github.io/" class="links font-weight-bold"> SKINRI</a>
+  		</div>
+	</footer>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
